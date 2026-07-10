@@ -1,35 +1,34 @@
-# 📚 Komga Flake with Desktop Launcher
+# Komga Flake with Desktop Launcher
 
-This Nix flake sets up **Komga** (a media server for comics and manga) and provides:
+This Nix flake installs Komga and provides:
 
-- A wrapper script to launch Komga in the background
-- A desktop launcher (`komga.desktop`)
-- A custom icon for GUI integration
+* A wrapper script that starts Komga in the background
+* A desktop launcher
+* A custom application icon
 
----
+## Build
 
-## ⚙️ Build Instructions
-
-Make sure you have flakes enabled, then run:
+Make sure Nix flakes are enabled, then run:
 
 ```bash
 nix build
 ```
 
-This will create a `result/` directory containing the launcher, `.desktop` file, and icon.
+The build output will be available through the `result` symlink.
 
----
+## Usage
 
-## 🚀 Usage
+Launch Komga from your application menu.
 
-After building:
+The launcher starts the Komga server and opens the following address in your browser:
 
-Launch **Komga** from your app menu. It will start the server and open [http://localhost:25600](http://localhost:25600) in your browser.
+```text
+http://localhost:25600
+```
 
----
+## Included Components
 
-## 📦 Includes
-
-- Komga `v1.21.3` downloaded from SourceForge
-- Java 17 runtime
-- Desktop launcher and custom icon
+* Komga version 1.21.3
+* Java 17 runtime
+* Desktop launcher
+* Custom application icon
